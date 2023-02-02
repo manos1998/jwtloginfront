@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +12,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardUserComponent } from './board-user/board-user.component';
 import { httpInterceptorProviders } from './_helpers/_helpers/http.interceptor';
+import { DatePipe } from '@angular/common';
+import { ViewUserReportComponent } from './view-user-report/view-user-report.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +23,16 @@ import { httpInterceptorProviders } from './_helpers/_helpers/http.interceptor';
     HomeComponent,
     ProfileComponent,
     BoardAdminComponent,
-    BoardUserComponent
+    BoardUserComponent,
+    ViewUserReportComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [httpInterceptorProviders],
+  providers: [httpInterceptorProviders, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

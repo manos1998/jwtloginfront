@@ -1,0 +1,77 @@
+[
+    {
+        "id": 1,
+        "username": "user",
+        "email": "user@gmail.com",
+        "password": "$2a$10$z5DVoHs/bQes5xLKabA8FOAvdi6.xV9JlLmFdTHpwsK0raqUDNqPW",
+        "login": null,
+        "logout": null,
+        "phone": "1234567890",
+        "roles": [
+            {
+                "id": 2,
+                "name": "ROLE_USER"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "username": "admin",
+        "email": "admin@stark.com",
+        "password": "$2a$10$B.ufwuUhUmQeayC.i8LNMe9nt3D7HZUWixLrF/mGzGY4pK2TeLCkW",
+        "login": null,
+        "logout": null,
+        "phone": "1234567890",
+        "roles": [
+            {
+                "id": 1,
+                "name": "ROLE_ADMIN"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "username": "admina",
+        "email": "admina@stark.com",
+        "password": "$2a$10$a1.525.ROpBwBsAKh.ziJeaGljWZ.DyYU.YdzUGugeByJtPNBSIpm",
+        "login": null,
+        "logout": null,
+        "phone": "1234567890",
+        "roles": [
+            {
+                "id": 1,
+                "name": "ROLE_ADMIN"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "username": "usera",
+        "email": "usera@gmail.com",
+        "password": "$2a$10$s77UOcTXI2bgow87tbDquuwarZgCtyRpWznkE1/V8MJgAyn8bxGJa",
+        "login": null,
+        "logout": null,
+        "phone": "1234567890",
+        "roles": [
+            {
+                "id": 2,
+                "name": "ROLE_USER"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "username": "manos",
+        "email": "manos@gmail.com",
+        "password": "$2a$10$yR9pgnHERqnGopnu0I1r1uMMGKb4IdLwgyg19B8V1T7fWshOwT0l.",
+        "login": null,
+        "logout": null,
+        "phone": "1234567890",
+        "roles": [
+            {
+                "id": 2,
+                "name": "ROLE_USER"
+            }
+        ]
+    }
+]
