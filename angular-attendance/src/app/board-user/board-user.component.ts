@@ -59,7 +59,7 @@ export class BoardUserComponent implements OnInit {
 
   viewUserReport(): void {
     // console.log("--------------"+this.router+"------------------------"+ this.currentUser.id);
-    this.router.navigate(['/report'],this.currentUser.id)
+    this.router.navigate(['/report/',this.currentUser.id])
   }
 
   login(): void {
@@ -68,6 +68,7 @@ export class BoardUserComponent implements OnInit {
       next: data => {
         this.message = data;
         console.log(data);
+        console.log("Logged in")
         this.logged = true;
       },
       error: err => {console.log(err)
@@ -86,7 +87,8 @@ export class BoardUserComponent implements OnInit {
       next: data => {
         this.message = data;
         console.log(data);
-        this.logged = true;
+        console.log("Logged Out")
+        this.logged = false;
       },
       error: err => {console.log(err)
         if (err.error) {

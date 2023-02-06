@@ -14,6 +14,7 @@ import { BoardUserComponent } from './board-user/board-user.component';
 import { httpInterceptorProviders } from './_helpers/_helpers/http.interceptor';
 import { DatePipe } from '@angular/common';
 import { ViewUserReportComponent } from './view-user-report/view-user-report.component';
+import { ViewAdminReportComponent } from './view-admin-report/view-admin-report.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ViewUserReportComponent } from './view-user-report/view-user-report.com
     BoardAdminComponent,
     BoardUserComponent,
     ViewUserReportComponent,
+    ViewAdminReportComponent,
   ],
   imports: [
     BrowserModule,

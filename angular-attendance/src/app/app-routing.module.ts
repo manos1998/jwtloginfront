@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
+import { ViewAdminReportComponent } from './view-admin-report/view-admin-report.component';
 import { ViewUserReportComponent } from './view-user-report/view-user-report.component';
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'report', component: ViewUserReportComponent },
+  { path: 'report/:id', component: ViewUserReportComponent },
+  { path: 'report/:id/:date', component: ViewAdminReportComponent },
   { path: 'user', component: BoardUserComponent },
   { path: 'admin', component: BoardAdminComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }

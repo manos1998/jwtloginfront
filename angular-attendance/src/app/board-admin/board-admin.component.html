@@ -1,22 +1,30 @@
-<div class="position-absolute top-50 start-50 translate-middle card">
-  <ul class="list-group list-group-flush" *ngFor="let user of content; let i = index">
-      <li class="list-group-item">
-        <button type="button" class="btn btn-info">
-          User <span class="badge text-bg-secondary" (click)="viewUserReport(user.id)">{{user.id}}</span>
+<div class="list row" style="margin-top: 20px;">
+  <div class="col-md-8">
+    <div class="input-group mb-3">
+      <!-- <input type="text" class="form-control" placeholder="Search by name" style="margin-right: 5px; border-radius: 20px;" [(ngModel)]="username" /> -->
+      
+      <select class="form-select" aria-label="Default select example">
+        <option value="1" *ngFor="let user of content; let i = index"> <span (click)="setuser(user.id)">{{user.id}}</span></option>
+      </select>
+
+      <div class="dropdown">
+        <button type="button" class="btn btn-light" style="margin-left: 5px; border-radius: 5px; ">Select User</button>
+        <div class="dropdown-content">
+          <li class="list-group-item" (click)="setuser(user.id)" *ngFor="let user of content; let i = index">
+            {{ user.id }} - {{user.username | titlecase }}
+          </li>
+        </div>
+      </div>
+      <input type="date" class="form-control" id="date" style="border-radius: 5px; max-width: 130px; margin-right: 5px; margin-left: 5px;"
+      [ngModel]="selectedDate | date:'yyyy-MM-dd'"  (ngModelChange)="setDate('datee', $event)"  name="selectedDate">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button" (click)="viewAdminUserReport()">
+          Search
         </button>
-      </li>
-  </ul>
-  <!-- <div class="accordion accordion-flush" id="accordionFlushExample" *ngFor="let user of content; let i = index">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingOne">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-          User {{user.id}}
-        </button>
-      </h2>
-      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
       </div>
     </div>
-  </div> -->
-
+    <button class="btn btn-outline-secondary" type="button" (click)="viewAdminUserReport()">
+      Search
+    </button>
+  </div>
 </div>

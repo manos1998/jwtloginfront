@@ -17,12 +17,10 @@ export class ViewUserReportComponent implements OnInit {
   constructor(private userService: UserService, private storageService: StorageService, private route: ActivatedRoute,) {
   }
 
-   
-
   ngOnInit(): void {
     this.currentUser = this.storageService.getUser();
     console.log("------------------------"+this.route.snapshot.params["id"]);
-    this.userService.getUserViewReport(this.currentUser.id).subscribe({
+    this.userService.getUserViewReport(this.route.snapshot.params["id"]).subscribe({
       next: data => {
         this.userReport = data;
         console.log(data);

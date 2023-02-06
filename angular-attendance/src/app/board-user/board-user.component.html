@@ -16,13 +16,13 @@
                     <h5 class="card-title">Hello {{currentUser.username}} - {{currentUser.id}}</h5>
                     <div>
                         <div>
-                            <div class="time">{{time}}</div>
-                            <div class="time">{{date}}</div>
+                            <div class="time">Time: {{time}}</div>
+                            <div class="date">Date: {{date}}</div>
                             <div *ngIf="!logged">
-                                <button type="button" class="btn btn-outline-success" (click)="login()">Login</button>
+                                <button type="button" class="btn btn-outline-success" (click)="login()" style="margin-left: -px; margin-bottom: 10px; margin-top: 10px;">Login</button>
                             </div>
                             <div *ngIf="logged">
-                                <button type="button" class="btn btn-outline-danger" (click)="logout()">Logout</button>
+                                <button type="button" class="btn btn-outline-danger" (click)="logout()" style="margin: 10px;">Logout</button>
                             </div>
                         </div>
                     </div>

@@ -3,6 +3,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "Launch DependencyInjection$Injected",
+      "request": "launch",
+      "mainClass": "app.DependencyInjection$Injected",
+      "projectName": "angular-attendance_dc005153"
+    },
+    {
       "name": "ng serve",
       "type": "pwa-chrome",
       "request": "launch",

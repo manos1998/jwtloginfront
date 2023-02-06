@@ -30,6 +30,14 @@ export class UserService {
   getUserViewReport(id: any): Observable<any> {
     return this.http.get(`${API_URL + 'user/report'}/${id}`);
   }
+
+  getAdminViewReport(id: any, date: any): Observable<any> {
+    return this.http.get(`${API_URL + 'user/report'}/${id}?date=${date}`);
+  }
+
+  findByTitle(title: any): Observable<any> {
+    return this.http.get<any>(`${API_URL + 'user'}?title=${title}`);
+  }
   
   getAdminBoard(): Observable<any> {
     return this.http.get(API_URL + 'admin');

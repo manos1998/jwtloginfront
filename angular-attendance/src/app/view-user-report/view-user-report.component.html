@@ -1,10 +1,10 @@
 <div style="width: 18rem;" class="position-absolute top-50 start-50 translate-middle card">
     <ul class="list-group list-group-flush" *ngFor="let user of userReport">
         <li class="list-group-item">
-            Date: <strong>{{user.login | date : 'shortDate'}}</strong> <br>
-            Sign in: <strong *ngIf="user.login != null">{{user.login | date : 'mediumTime'}}</strong>
+            Date: <strong>{{user.date }}</strong> <br>
+            Sign in: <strong *ngIf="user.login != null">{{user.login}}</strong>
             <strong *ngIf="user.login == null">Absent</strong><br>
-            Sign out: <strong>{{user.logout | date : 'mediumTime' }}</strong> 
+            Sign out: <strong>{{user.logout}}</strong> 
             <strong *ngIf="user.logout == null">Absent</strong><br>
         </li>
     </ul>
